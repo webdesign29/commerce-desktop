@@ -9,9 +9,11 @@ import (
 )
 
 func main() {
-
 	go startWebView();
-	
+	go startTrayIcon();
+}
+
+func startTrayIcon(){
 	onExit := func() {
 	}
 	systray.Run(onReady, onExit)
